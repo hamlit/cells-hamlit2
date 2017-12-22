@@ -5,26 +5,25 @@ class HamlitTest < MiniTest::Spec
   let (:song_cell) { SongCell.new(nil, controller: controller) }
 
   # render in render
-  it { skip; song_cell.(:render_in_render).must_equal "<b>Questions: Yes!\n</b>\n" }
+  it { song_cell.(:render_in_render).must_equal "<b>Questions: Yes!\n</b>\n" }
 
   # Original Hamlit's behavior
-  it { skip; song_cell.(:render_inside_block).must_equal "0\n1\n2\n" }
+  it { song_cell.(:render_inside_block).must_equal "0\n1\n2\n" }
 
   # URL helpers work in cell instance.
   it { skip; song_cell.songs_path.must_equal "/songs" }
 
   # content_tag { }
-  it { skip; song_cell.(:with_content_tag).must_equal "<div>Beachparty</div>\n" }
+  it { song_cell.(:with_content_tag).must_equal "<div>Beachparty</div>\n" }
 
   # content_tag { content_tag { } }
-  it do skip; song_cell.(:with_content_tag_and_content_tag).must_equal %{<span>Title:
+  it do song_cell.(:with_content_tag_and_content_tag).must_equal %{<span>Title:
 <div>Still Knee Deep
 </div></span>}
   end
 
   # form_tag { content_tag { } }
   it( "xxx") do
-    skip
     form_tag = "<form action=\"/erubis/is/horribly/outdated\" accept-charset=\"UTF-8\" method=\"post\"><input name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" />"
     form_tag = "<form accept-charset=\"UTF-8\" action=\"/erubis/is/horribly/outdated\" method=\"post\"><div style=\"margin:0;padding:0;display:inline\"><input name=\"utf8\" type=\"hidden\" value=\"&#x2713;\" /></div>" if ActionPack::VERSION::MAJOR == 3
 
@@ -63,7 +62,6 @@ Bonjour!
 
   describe "block capture" do
     it do
-      skip
       song_cell.(:with_capture).must_equal %{Hallo
 <p>
 More
