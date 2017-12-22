@@ -2,6 +2,15 @@ require "hamlit"
 
 module Cell
   module Hamlit
+    def self.included(base)
+      begin
+        require "hamlit/rails_helpers"
+      rescue LoadError
+      else
+        base.include ::Hamlit::RailsHelpers
+      end
+    end
+
     def template_options_for(options)
       {
         escape_html:    false,
@@ -34,11 +43,15 @@ module Cell
     def capture(*args)
       value = nil
       buffer = with_output_buffer { value = yield(*args) }
-      buffer.to_s if buffer.size > 0
-      value
+      if buffer.size > 0
+        buffer.to_s
+      else
+        value
+      end
     end
 
     def render_template(*)
+      @output_buffer ||= nil # suppress uninitialized instance variable warning
       old_output_buffer = @output_buffer
       super
     ensure

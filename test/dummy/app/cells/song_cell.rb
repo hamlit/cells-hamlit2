@@ -1,9 +1,7 @@
 class SongCell < Cell::ViewModel
   self.view_paths = ["test/dummy/app/cells"]
 
-
   include ::Cell::Hamlit
-  include ::Hamlit::RailsHelpers
 
   def protect_against_forgery?
     false

@@ -8,3 +8,4 @@ gem 'actionpack'
 gem 'actionview'
 
 gem 'minitest-line'
+gem 'pry'

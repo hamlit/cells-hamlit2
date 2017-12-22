@@ -76,13 +76,11 @@ Hidden!
 
   describe "block surround" do
     it do
-      skip
       song_cell.(:with_surround).must_equal %{Hallo
 <p>
 More
 </p>
 (Hidden!)
-
 }
     end
   end
