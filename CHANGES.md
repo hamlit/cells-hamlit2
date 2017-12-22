@@ -1,6 +1,10 @@
+# 0.2.0
+
+* Fix `surround` helper
+
 # 0.1.1
 
-* Now using `hamlit-block` for capturing.
+* Make initial cells-hamlit2 release
 
 # 0.1.0
 
