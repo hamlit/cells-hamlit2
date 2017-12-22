@@ -17,7 +17,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "cells", "~> 4.0"
+  spec.add_dependency "cells", ">= 4.0.1", "< 6.0.0"
+  spec.add_dependency "cells-rails"
   spec.add_dependency "hamlit"
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
