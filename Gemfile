@@ -3,7 +3,8 @@ source 'https://rubygems.org'
 # Specify your gem's dependencies in cells-haml.gemspec
 gemspec
 
-gem 'cells', github: 'apotonick/cells'
+gem 'cells', git: 'https://github.com/trailblazer/cells.git'
+gem 'cells-rails', git: 'https://github.com/trailblazer/cells-rails.git'
 gem 'railties'
 gem 'actionpack'
 gem 'actionview'

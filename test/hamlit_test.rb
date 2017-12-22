@@ -71,4 +71,16 @@ Hidden!
 }
     end
   end
+
+  describe "block surround" do
+    it do
+      song_cell.(:with_surround).must_equal %{Hallo
+<p>
+More
+</p>
+(Hidden!)
+
+}
+    end
+  end
 end
