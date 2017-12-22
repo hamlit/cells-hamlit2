@@ -1,4 +1,4 @@
-# cells-hamlit2
+# cells-hamlit2 [![Build Status](https://travis-ci.org/hamlit/cells-hamlit2.svg?branch=master)](https://travis-ci.org/hamlit/cells-hamlit2)
 
 Temporary workaround version of [cells-hamlit](https://github.com/trailblazer/cells-hamlit) until https://github.com/trailblazer/cells-hamlit/issues/6 is closed.
 
