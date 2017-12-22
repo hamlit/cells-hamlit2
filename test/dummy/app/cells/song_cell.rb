@@ -2,7 +2,8 @@ class SongCell < Cell::ViewModel
   self.view_paths = ["test/dummy/app/cells"]
 
 
-  include Cell::Hamlit
+  include ::Cell::Hamlit
+  include ::Hamlit::RailsHelpers
 
   def protect_against_forgery?
     false
@@ -21,10 +22,6 @@ class SongCell < Cell::ViewModel
   end
 
   def with_block
-    render
-  end
-
-  def with_capture
     render
   end
 
@@ -49,6 +46,10 @@ class SongCell < Cell::ViewModel
   end
 
   def with_capture
+    render
+  end
+
+  def with_surround
     render
   end
 

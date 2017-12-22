@@ -14,8 +14,8 @@ module Dummy
     config.secret_key_base = SecureRandom.uuid
 
     # enable asset pipeline as in development.
-    config.assets.enabled = true
-    config.assets.compile = true
+    # config.assets.enabled = true
+    # config.assets.compile = true
     config.cache_classes = true
 
     # Show full error reports and disable caching
