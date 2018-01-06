@@ -12,6 +12,8 @@ gem "cells-hamlit2"
 gem "hamlit"
 ```
 
+If you use rails, add `gem "cells-rails"`, too.
+
 ## HTML Escaping
 
 Cells doesn't escape except when you tell it to do. However, you may run into problems when using Rails helpers. Internally, those helpers often blindly escape. This is not Cells' fault but a design flaw in Rails.
